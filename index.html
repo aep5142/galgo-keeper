@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Assignment 2 — Agustín Eyzaguirre</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f5f4f0;
+      color: #1a1a1a;
+      min-height: 100vh;
+      padding: 3rem 2rem;
+    }
+
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+
+    header p {
+      margin-top: 0.4rem;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    section {
+      margin-bottom: 2.5rem;
+    }
+
+    section h2 {
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+
+    .links a {
+      display: inline-block;
+      margin-right: 1.5rem;
+      color: #1a1a1a;
+      font-size: 1rem;
+      text-decoration: underline;
+    }
+
+    .question {
+      margin-bottom: 2rem;
+    }
+
+    .question h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .question p {
+      font-size: 0.95rem;
+      color: #444;
+      font-style: italic;
+      border-left: 3px solid #ccc;
+      padding-left: 1rem;
+      line-height: 1.6;
+    }
+
+    footer {
+      border-top: 1px solid #ddd;
+      padding-top: 1rem;
+      font-size: 0.85rem;
+      color: #888;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Assignment 2</h1>
+      <p>Agustín Eyzaguirre — Design Build Ship (Section 1) - Spring 2026</p>
+    </header>
+
+    <section>
+      <h2>Deliverables</h2>
+      <div class="links">
+        <a href="https://the-andes.vercel.app/" target="_blank">Vercel URL</a>
+        <a href="https://github.com/aep5142/galgo-keeper" target="_blank">GitHub URL</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Reflection</h2>
+
+      <div class="question">
+        <h3>1. What's in your CLAUDE.md? How did your plan shape what Claude built — and how did it evolve as you worked?</h3>
+        <p>
+          First, I wrote Claude.md by myself explaining what was the project about, what I wanted to build, and pointed to the instructions file of the homework.
+          Also, I gave the instruction that Claude would do the coding part and we would build the UX together, and that I didn't want Claude to do the whole 
+          homework, that it would be my assistant for the project.
+        <br>
+        <br>
+          After that, and after we build the first iterations in the first session, I asked Claude to optimize the context file with the data he knew about the project
+          and with the project structure and style. After each the session work, I ask Claude if we should update the context file. Then it does/doesn't do it depending 
+          on what we worked on that session
+        <br>
+        <br>
+          Now, <code>Claude.md</code> has what the project is, requirements, project structure and architecture, styling, and others.
+        </p>
+        
+      </div>
+
+      <div class="question">
+        <h3>2. Exercise your mental model: Pick one page in your app. Trace the path: what file renders it, what's the route, what components does it use, where does the data come from?</h3>
+        <p>
+          I chose the page that shows the <code>Books</code>. It's rendered from <code>content-manager/src/app/books/page.tsx</code>. In the same path
+          <code>content-manager/src/app/books/page</code> there's the sub-repo called <code>add/</code> which is the form that is displayed to add Books
+          to the content manager.
+          <br>
+          <br>
+          Inside the Book repo, there's also the path called <code>[id]</code> which contains the displayed template of the page of the specific item of the book
+          that was added. In this page we can see the details, timeline of the item, picture, and others. Now, since there's no database, the memory is in the computer.
+          <br>
+          <br>
+          It's using three main components which are the shared ones among all content types (Content, Books, Movies). This ones are <code>Navigation Bar</code>,
+          <code>Categories Input</code>, and <code>Timeline Status</code> (the one displayed in the specific page of each item).
+
+      </p>
+      </div>
+
+      <div class="question">
+        <h3>Describe one thing that happened when Claude tested your app with Playwright MCP. How did the build → verify loop change how you worked?</h3>
+        <p>
+          It was a game changer feature. I asked to add the feature of adding a picture or adding the camera. I asked Playwright to test it and check if it worked.
+          <br>
+          <br>
+          When I did that, Playwright opened the browser and started using the app as if it was someone else working on my computer.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>Design Build Ship — Assignment 1 (Section 1) — Spring 2026</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>

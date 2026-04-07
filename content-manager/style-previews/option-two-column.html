@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option 2 — Two-Column Master/Detail</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 h-screen flex overflow-hidden font-sans">
+
+  <!-- Sidebar Nav -->
+  <aside class="w-52 border-r border-gray-200 bg-gray-50/50 p-4 flex flex-col shrink-0">
+    <div class="font-semibold text-lg px-3 mb-6">Galgo Keeper</div>
+    <nav class="flex flex-col gap-1">
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-500 hover:bg-gray-50">
+        <span class="text-base">⊞</span> Dashboard
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-500 hover:bg-blue-50/50">
+        <span class="text-base">◉</span> Content
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium bg-violet-50 text-violet-700">
+        <span class="text-base">▤</span> Books
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-500 hover:bg-amber-50/50">
+        <span class="text-base">▶</span> Videos
+      </a>
+    </nav>
+  </aside>
+
+  <!-- Main area: list + detail -->
+  <div class="flex flex-1 min-w-0">
+
+    <!-- List panel -->
+    <div class="w-[420px] shrink-0 border-r border-gray-200 overflow-y-auto p-6">
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-2xl font-bold text-violet-700">Books</h1>
+        <button class="bg-violet-600 text-white text-sm px-4 py-2 rounded hover:bg-violet-700">+ Add Book</button>
+      </div>
+
+      <div class="flex flex-wrap gap-3 mb-6">
+        <select class="border border-gray-300 rounded px-3 py-1.5 text-sm">
+          <option>All Statuses</option>
+        </select>
+        <select class="border border-gray-300 rounded px-3 py-1.5 text-sm">
+          <option>All Categories</option>
+        </select>
+      </div>
+
+      <!-- Fiction -->
+      <div class="mb-8">
+        <div class="mb-3">
+          <span class="inline-block bg-violet-100 text-violet-700 text-xs font-semibold uppercase tracking-wide px-3 py-1.5 rounded-full">Fiction</span>
+        </div>
+        <div class="rounded-lg border border-gray-200 overflow-hidden">
+          <div onclick="showDetail('karamazov')" class="item flex items-center justify-between px-4 py-3 bg-white hover:bg-gray-50 cursor-pointer">
+            <div>
+              <p class="font-medium text-sm">The Brothers Karamazov</p>
+              <p class="text-xs text-gray-500">Fyodor Dostoevsky</p>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-700">Reading</span>
+          </div>
+          <div onclick="showDetail('solitude')" class="item flex items-center justify-between px-4 py-3 bg-white hover:bg-gray-50 cursor-pointer border-t border-gray-100">
+            <div>
+              <p class="font-medium text-sm">One Hundred Years of Solitude</p>
+              <p class="text-xs text-gray-500">Gabriel Garcia Marquez</p>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-600">Want to Read</span>
+          </div>
+          <div onclick="showDetail('paramo')" class="item flex items-center justify-between px-4 py-3 bg-white hover:bg-gray-50 cursor-pointer border-t border-gray-100">
+            <div>
+              <p class="font-medium text-sm">Pedro Paramo</p>
+              <p class="text-xs text-gray-500">Juan Rulfo</p>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-600">Want to Read</span>
+          </div>
+          <button class="w-full text-left px-4 py-2 text-xs text-gray-500 hover:bg-gray-50 cursor-pointer border-t border-gray-100" onclick="this.nextElementSibling.classList.toggle('hidden'); this.textContent = this.textContent.includes('Show') ? 'Hide completed (1)' : 'Show completed (1)'">Show completed (1)</button>
+          <div class="hidden">
+            <div onclick="showDetail('hopscotch')" class="item flex items-center justify-between px-4 py-3 bg-white hover:bg-gray-50 cursor-pointer border-t border-gray-100">
+              <div>
+                <p class="font-medium text-sm">Hopscotch</p>
+                <p class="text-xs text-gray-500">Julio Cortazar</p>
+              </div>
+              <span class="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Finished</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technical -->
+      <div class="mb-8">
+        <div class="mb-3">
+          <span class="inline-block bg-violet-100 text-violet-700 text-xs font-semibold uppercase tracking-wide px-3 py-1.5 rounded-full">Technical</span>
+        </div>
+        <div class="rounded-lg border border-gray-200 overflow-hidden">
+          <div onclick="showDetail('ddia')" class="item flex items-center justify-between px-4 py-3 bg-white hover:bg-gray-50 cursor-pointer">
+            <div>
+              <p class="font-medium text-sm">Designing Data-Intensive Applications</p>
+              <p class="text-xs text-gray-500">Martin Kleppmann</p>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-yellow-100 text-yellow-700">Reading</span>
+          </div>
+          <div onclick="showDetail('stats')" class="item flex items-center justify-between px-4 py-3 bg-white hover:bg-gray-50 cursor-pointer border-t border-gray-100">
+            <div>
+              <p class="font-medium text-sm">The Art of Statistics</p>
+              <p class="text-xs text-gray-500">David Spiegelhalter</p>
+            </div>
+            <span class="text-xs px-2 py-0.5 rounded bg-gray-100 text-gray-600">Want to Read</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detail panel -->
+    <div id="detail-panel" class="flex-1 overflow-y-auto p-8">
+      <div id="detail-empty" class="flex items-center justify-center h-full text-gray-400 text-sm">
+        Select a book to see its details
+      </div>
+      <div id="detail-content" class="hidden max-w-lg">
+        <a href="#" class="text-sm text-gray-500 hover:underline" onclick="hideDetail(); return false">&larr; Back to list</a>
+        <h1 id="detail-title" class="text-2xl font-bold mt-4 mb-1"></h1>
+        <p id="detail-author" class="text-gray-500 mb-4"></p>
+        <div class="flex items-center gap-3 mb-6">
+          <span id="detail-category" class="text-xs bg-purple-50 text-purple-600 px-2 py-1 rounded"></span>
+          <span id="detail-status" class="text-xs px-2 py-1 rounded"></span>
+        </div>
+        <div id="detail-notes-section" class="mb-6">
+          <h2 class="text-sm font-medium mb-1">Notes</h2>
+          <p id="detail-notes" class="text-sm text-gray-600 whitespace-pre-wrap"></p>
+        </div>
+        <div id="detail-history" class="mb-6">
+          <h2 class="text-sm font-medium mb-2">Status History</h2>
+          <ul id="detail-history-list" class="space-y-1"></ul>
+        </div>
+        <p id="detail-date" class="text-xs text-gray-400 mb-6"></p>
+        <button class="text-sm text-red-600 hover:underline">Delete</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+const books = {
+  karamazov: {
+    title: 'The Brothers Karamazov',
+    author: 'Fyodor Dostoevsky',
+    category: 'Fiction',
+    status: 'Reading',
+    statusClass: 'bg-yellow-100 text-yellow-700',
+    notes: 'Incredible exploration of faith, doubt, and morality. Currently on Part II — the Grand Inquisitor chapter was mind-blowing.',
+    history: [
+      { status: 'Want to Read', date: 'Jan 15, 2026' },
+      { status: 'Reading', date: 'Mar 2, 2026' },
+    ],
+    dateAdded: 'Jan 15, 2026',
+  },
+  solitude: {
+    title: 'One Hundred Years of Solitude',
+    author: 'Gabriel Garcia Marquez',
+    category: 'Fiction',
+    status: 'Want to Read',
+    statusClass: 'bg-gray-100 text-gray-600',
+    notes: 'Recommended by Prof. Alvarez after the policy seminar.',
+    history: [
+      { status: 'Want to Read', date: 'Feb 20, 2026' },
+    ],
+    dateAdded: 'Feb 20, 2026',
+  },
+  paramo: {
+    title: 'Pedro Paramo',
+    author: 'Juan Rulfo',
+    category: 'Fiction',
+    status: 'Want to Read',
+    statusClass: 'bg-gray-100 text-gray-600',
+    notes: '',
+    history: [
+      { status: 'Want to Read', date: 'Mar 10, 2026' },
+    ],
+    dateAdded: 'Mar 10, 2026',
+  },
+  hopscotch: {
+    title: 'Hopscotch',
+    author: 'Julio Cortazar',
+    category: 'Fiction',
+    status: 'Finished',
+    statusClass: 'bg-green-100 text-green-700',
+    notes: 'Read the "Table of Instructions" path. Wild structure — might re-read the linear version someday.',
+    history: [
+      { status: 'Want to Read', date: 'Nov 5, 2025' },
+      { status: 'Reading', date: 'Dec 1, 2025' },
+      { status: 'Finished', date: 'Dec 31, 2025' },
+    ],
+    dateAdded: 'Nov 5, 2025',
+  },
+  ddia: {
+    title: 'Designing Data-Intensive Applications',
+    author: 'Martin Kleppmann',
+    category: 'Technical',
+    status: 'Reading',
+    statusClass: 'bg-yellow-100 text-yellow-700',
+    notes: 'Chapter 5 on replication is gold for the distributed systems project.',
+    history: [
+      { status: 'Want to Read', date: 'Jan 8, 2026' },
+      { status: 'Reading', date: 'Feb 15, 2026' },
+    ],
+    dateAdded: 'Jan 8, 2026',
+  },
+  stats: {
+    title: 'The Art of Statistics',
+    author: 'David Spiegelhalter',
+    category: 'Technical',
+    status: 'Want to Read',
+    statusClass: 'bg-gray-100 text-gray-600',
+    notes: 'Heard about it on a podcast. Good intro for non-technical friends too.',
+    history: [
+      { status: 'Want to Read', date: 'Mar 25, 2026' },
+    ],
+    dateAdded: 'Mar 25, 2026',
+  },
+}
+
+let activeItem = null
+
+function showDetail(id) {
+  const book = books[id]
+  if (!book) return
+
+  // Highlight active row
+  document.querySelectorAll('.item').forEach(el => el.classList.remove('bg-violet-50'))
+  if (activeItem) activeItem.classList.remove('bg-violet-50')
+  event.currentTarget.classList.add('bg-violet-50')
+  activeItem = event.currentTarget
+
+  document.getElementById('detail-empty').classList.add('hidden')
+  document.getElementById('detail-content').classList.remove('hidden')
+
+  document.getElementById('detail-title').textContent = book.title
+  document.getElementById('detail-author').textContent = book.author
+  document.getElementById('detail-category').textContent = book.category
+  const statusEl = document.getElementById('detail-status')
+  statusEl.textContent = book.status
+  statusEl.className = 'text-xs px-2 py-1 rounded ' + book.statusClass
+
+  const notesSection = document.getElementById('detail-notes-section')
+  const notesEl = document.getElementById('detail-notes')
+  if (book.notes) {
+    notesSection.classList.remove('hidden')
+    notesEl.textContent = book.notes
+  } else {
+    notesSection.classList.add('hidden')
+  }
+
+  const historyList = document.getElementById('detail-history-list')
+  historyList.innerHTML = book.history.map(h =>
+    `<li class="text-xs text-gray-500"><span class="font-medium text-gray-700">${h.status}</span> — ${h.date}</li>`
+  ).join('')
+
+  document.getElementById('detail-date').textContent = 'Added ' + book.dateAdded
+}
+
+function hideDetail() {
+  document.getElementById('detail-empty').classList.remove('hidden')
+  document.getElementById('detail-content').classList.add('hidden')
+  if (activeItem) {
+    activeItem.classList.remove('bg-violet-50')
+    activeItem = null
+  }
+}
+</script>
+</body>
+</html>

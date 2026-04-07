@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Timeline Prototype</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-900 p-8 max-w-2xl mx-auto font-sans">
+  <h1 class="text-2xl font-bold text-violet-700 mb-8">Timeline Prototypes</h1>
+
+  <!-- Book example: full journey -->
+  <div class="mb-12">
+    <h2 class="text-lg font-semibold mb-1">The Brothers Karamazov</h2>
+    <p class="text-sm text-gray-500 mb-4">Fyodor Dostoevsky</p>
+
+    <h3 class="text-sm font-medium mb-3">Timeline</h3>
+    <div class="flex items-center">
+      <!-- Step 1 -->
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-gray-200 border-gray-300"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Want to Read</p>
+        <p class="text-xs text-gray-400">Jan 15, 2026</p>
+      </div>
+      <!-- Connector -->
+      <div class="w-10 border-t-2 border-dashed border-gray-300 mx-2 self-start mt-2"></div>
+      <!-- Step 2 -->
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-yellow-400 border-yellow-500"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Reading</p>
+        <p class="text-xs text-gray-400">Mar 2, 2026</p>
+      </div>
+      <!-- Connector -->
+      <div class="w-10 border-t-2 border-dashed border-gray-300 mx-2 self-start mt-2"></div>
+      <!-- Step 3 -->
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-green-400 border-green-500"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Finished</p>
+        <p class="text-xs text-gray-400">Dec 31, 2025</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content example: 2 steps -->
+  <div class="mb-12">
+    <h2 class="text-lg font-semibold mb-1">Attention Is All You Need</h2>
+    <p class="text-sm text-gray-500 mb-4">paper &middot; high priority</p>
+
+    <h3 class="text-sm font-medium mb-3">Timeline</h3>
+    <div class="flex items-center">
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-gray-200 border-gray-300"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Queued</p>
+        <p class="text-xs text-gray-400">Feb 10, 2026</p>
+      </div>
+      <div class="w-10 border-t-2 border-dashed border-gray-300 mx-2 self-start mt-2"></div>
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-yellow-400 border-yellow-500"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">In Progress</p>
+        <p class="text-xs text-gray-400">Mar 20, 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video example: dropped -->
+  <div class="mb-12">
+    <h2 class="text-lg font-semibold mb-1">The Platform</h2>
+    <p class="text-sm text-gray-500 mb-4">Movie &middot; rec'd by Lucas</p>
+
+    <h3 class="text-sm font-medium mb-3">Timeline</h3>
+    <div class="flex items-center">
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-gray-200 border-gray-300"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Queued</p>
+        <p class="text-xs text-gray-400">Jan 5, 2026</p>
+      </div>
+      <div class="w-10 border-t-2 border-dashed border-gray-300 mx-2 self-start mt-2"></div>
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-yellow-400 border-yellow-500"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Watching</p>
+        <p class="text-xs text-gray-400">Feb 12, 2026</p>
+      </div>
+      <div class="w-10 border-t-2 border-dashed border-gray-300 mx-2 self-start mt-2"></div>
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-orange-400 border-orange-500"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Dropped</p>
+        <p class="text-xs text-gray-400">Feb 14, 2026</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Single step example -->
+  <div class="mb-12">
+    <h2 class="text-lg font-semibold mb-1">Pedro Paramo</h2>
+    <p class="text-sm text-gray-500 mb-4">Juan Rulfo</p>
+
+    <h3 class="text-sm font-medium mb-3">Timeline</h3>
+    <div class="flex items-center">
+      <div class="flex flex-col items-center">
+        <div class="w-4 h-4 rounded-full border-2 bg-gray-200 border-gray-300"></div>
+        <p class="text-xs font-medium text-gray-700 mt-1">Want to Read</p>
+        <p class="text-xs text-gray-400">Mar 10, 2026</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

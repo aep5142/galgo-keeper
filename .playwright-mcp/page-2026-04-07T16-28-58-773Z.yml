@@ -1,0 +1,51 @@
+- generic [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [active] [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e34]:
+      - generic [ref=e35]:
+        - heading "Content" [level=1] [ref=e36]
+        - link "+ Add Content" [ref=e37] [cursor=pointer]:
+          - /url: /content/add
+      - generic [ref=e38]:
+        - combobox [ref=e39]:
+          - option "All Types" [selected]
+          - option "Article"
+          - option "Video"
+          - option "Paper"
+          - option "Blog"
+          - option "News"
+          - option "Other"
+        - combobox [ref=e40]:
+          - option "All Statuses" [selected]
+          - option "Queued"
+          - option "In Progress"
+          - option "Done"
+          - option "Dropped"
+        - combobox [ref=e41]:
+          - option "All Categories" [selected]
+      - paragraph [ref=e42]:
+        - text: No content found.
+        - link "Add something" [ref=e43] [cursor=pointer]:
+          - /url: /content/add
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

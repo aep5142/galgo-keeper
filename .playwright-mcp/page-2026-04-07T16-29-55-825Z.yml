@@ -1,0 +1,48 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e138]:
+      - generic [ref=e139]:
+        - heading "Books" [level=1] [ref=e140]
+        - link "+ Add Book" [ref=e141] [cursor=pointer]:
+          - /url: /books/add
+      - generic [ref=e142]:
+        - combobox [ref=e143]:
+          - option "All Statuses" [selected]
+          - option "Want to Read"
+          - option "Reading"
+          - option "Finished"
+          - option "Dropped"
+        - combobox [ref=e144]:
+          - option "All Categories" [selected]
+          - option "Technical"
+      - generic [ref=e146]:
+        - generic [ref=e148]: Technical
+        - link "Designing Data-Intensive Applications Martin Kleppmann Reading" [ref=e150] [cursor=pointer]:
+          - /url: /books/ffd988c2-d4b4-4665-b2b5-09d64ec39f29
+          - generic [ref=e151]:
+            - paragraph [ref=e153]: Designing Data-Intensive Applications
+            - paragraph [ref=e154]: Martin Kleppmann
+          - button "Reading" [ref=e155]
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

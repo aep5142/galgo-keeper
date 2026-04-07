@@ -1,0 +1,56 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e78]:
+      - generic [ref=e79]:
+        - heading "Content" [level=1] [ref=e80]
+        - link "+ Add Content" [ref=e81] [cursor=pointer]:
+          - /url: /content/add
+      - generic [ref=e82]:
+        - combobox [ref=e83]:
+          - option "All Types" [selected]
+          - option "Article"
+          - option "Video"
+          - option "Paper"
+          - option "Blog"
+          - option "News"
+          - option "Other"
+        - combobox [ref=e84]:
+          - option "All Statuses" [selected]
+          - option "Queued"
+          - option "In Progress"
+          - option "Done"
+          - option "Dropped"
+        - combobox [ref=e85]:
+          - option "All Categories" [selected]
+          - option "AI"
+      - generic [ref=e87]:
+        - generic [ref=e89]: AI
+        - link "The Future of AI Agents article · high priority In Progress" [ref=e91] [cursor=pointer]:
+          - /url: /content/d2d9321b-99b9-4b62-be71-1fdc73805792
+          - generic [ref=e92]:
+            - paragraph [ref=e94]: The Future of AI Agents
+            - paragraph [ref=e95]: article · high priority
+          - button "In Progress" [ref=e96]
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

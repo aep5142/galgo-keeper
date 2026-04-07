@@ -1,0 +1,48 @@
+- generic [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [active] [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e157]:
+      - generic [ref=e158]:
+        - heading "Videos" [level=1] [ref=e159]
+        - link "+ Add Video" [ref=e160] [cursor=pointer]:
+          - /url: /videos/add
+      - generic [ref=e161]:
+        - combobox [ref=e162]:
+          - option "All Types" [selected]
+          - option "Movie"
+          - option "TV Show"
+          - option "Documentary"
+        - combobox [ref=e163]:
+          - option "All Statuses" [selected]
+          - option "Queued"
+          - option "Watching"
+          - option "Watched"
+          - option "Dropped"
+        - combobox [ref=e164]:
+          - option "All Categories" [selected]
+      - paragraph [ref=e165]:
+        - text: No videos found.
+        - link "Add one" [ref=e166] [cursor=pointer]:
+          - /url: /videos/add
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

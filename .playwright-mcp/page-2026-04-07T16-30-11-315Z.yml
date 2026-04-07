@@ -1,0 +1,66 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e167]:
+      - heading "Add Video" [level=1] [ref=e168]
+      - generic [ref=e169]:
+        - generic [ref=e170]:
+          - generic [ref=e171]: Title *
+          - textbox [ref=e172]
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - generic [ref=e175]: Type
+            - combobox [ref=e176]:
+              - option "Movie" [selected]
+              - option "TV Show"
+              - option "Documentary"
+          - generic [ref=e177]:
+            - generic [ref=e178]: Status
+            - combobox [ref=e179]:
+              - option "Queued" [selected]
+              - option "Watching"
+              - option "Watched"
+          - generic [ref=e180]:
+            - generic [ref=e181]: Rating (1-5)
+            - combobox [ref=e182]:
+              - option "No rating" [selected]
+              - option "1"
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+        - generic [ref=e183]:
+          - generic [ref=e184]: Recommended by
+          - textbox "Who recommended this?" [ref=e185]
+        - generic [ref=e186]:
+          - generic [ref=e187]: Category *
+          - textbox "e.g. Sci-Fi, Comedy, True Crime" [ref=e189]
+        - generic [ref=e190]:
+          - checkbox "Private" [ref=e191]
+          - generic [ref=e192]: Private
+        - generic [ref=e193]:
+          - generic [ref=e194]: Notes
+          - textbox [ref=e195]
+        - button "Add Video" [ref=e196]
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--browser",
+        "chromium"
+      ],
+      "cwd": "/Users/agustin.ep/Library/CloudStorage/OneDrive-TheUniversityofChicago/01 UChicago/09 Spring 2026/02 Design Build Ship/03 Assignments/02/content-manager"
+    }
+  }
+}

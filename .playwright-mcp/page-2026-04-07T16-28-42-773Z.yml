@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e14]:
+      - heading "Dashboard" [level=1] [ref=e15]
+      - paragraph [ref=e16]: What you're currently working through.
+      - generic [ref=e17]:
+        - paragraph [ref=e18]: Nothing in progress yet.
+        - paragraph [ref=e19]:
+          - text: Add items from
+          - link "Content" [ref=e20] [cursor=pointer]:
+            - /url: /content
+          - text: ","
+          - link "Books" [ref=e21] [cursor=pointer]:
+            - /url: /books
+          - text: ", or"
+          - link "Videos" [ref=e22] [cursor=pointer]:
+            - /url: /videos
+          - text: and mark them as in progress to see them here.
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

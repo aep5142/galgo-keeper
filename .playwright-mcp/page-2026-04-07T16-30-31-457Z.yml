@@ -1,0 +1,64 @@
+- generic [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [active] [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e217]:
+      - heading "Dashboard" [level=1] [ref=e218]
+      - paragraph [ref=e219]: What you're currently working through.
+      - generic [ref=e220]:
+        - generic [ref=e221]:
+          - heading "Reading" [level=2] [ref=e222]
+          - link "View all books" [ref=e223] [cursor=pointer]:
+            - /url: /books
+        - link "Designing Data-Intensive Applications Martin Kleppmann Reading" [ref=e225] [cursor=pointer]:
+          - /url: /books/ffd988c2-d4b4-4665-b2b5-09d64ec39f29
+          - generic [ref=e226]:
+            - generic [ref=e227]:
+              - paragraph [ref=e228]: Designing Data-Intensive Applications
+              - paragraph [ref=e229]: Martin Kleppmann
+            - button "Reading" [ref=e230]
+      - generic [ref=e231]:
+        - generic [ref=e232]:
+          - heading "Reading / Consuming" [level=2] [ref=e233]
+          - link "View all content" [ref=e234] [cursor=pointer]:
+            - /url: /content
+        - link "The Future of AI Agents article · high priority In Progress" [ref=e236] [cursor=pointer]:
+          - /url: /content/d2d9321b-99b9-4b62-be71-1fdc73805792
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - paragraph [ref=e239]: The Future of AI Agents
+              - paragraph [ref=e240]: article · high priority
+            - button "In Progress" [ref=e241]
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - heading "Watching" [level=2] [ref=e244]
+          - link "View all videos" [ref=e245] [cursor=pointer]:
+            - /url: /videos
+        - link "Interstellar Movie Watching" [ref=e247] [cursor=pointer]:
+          - /url: /videos/f5644dfd-3e35-420e-900c-3918e0578362
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - paragraph [ref=e250]: Interstellar
+              - paragraph [ref=e251]: Movie
+            - button "Watching" [ref=e252]
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

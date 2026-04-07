@@ -10,10 +10,17 @@ Stack: **Next.js + Tailwind CSS**. Data lives in client-side state only (no data
 
 ## Commands
 
+All commands run from the `content-manager/` subdirectory.
+
+- `npm install` — install dependencies (must run before anything else, including Playwright MCP)
 - `npm run dev` — start dev server
 - `npm run build` — production build
 - `npm run lint` — lint
 - `npx playwright test` — run Playwright tests
+
+## MCP
+
+Playwright MCP is configured in `.mcp.json` (project root, NOT inside `.claude/`) with cwd set to `content-manager/`. It requires `npm install` to have been run first — without `node_modules` present, the MCP server will fail to connect.
 
 ## Architecture
 

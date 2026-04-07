@@ -1,0 +1,63 @@
+- generic [active] [ref=e1]:
+  - complementary [ref=e2]:
+    - link "Galgo Keeper" [ref=e3] [cursor=pointer]:
+      - /url: /
+    - navigation [ref=e4]:
+      - link "⊞ Dashboard" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e6]: ⊞
+        - text: Dashboard
+      - link "◉ Content" [ref=e7] [cursor=pointer]:
+        - /url: /content
+        - generic [ref=e8]: ◉
+        - text: Content
+      - link "▤ Books" [ref=e9] [cursor=pointer]:
+        - /url: /books
+        - generic [ref=e10]: ▤
+        - text: Books
+      - link "▶ Videos" [ref=e11] [cursor=pointer]:
+        - /url: /videos
+        - generic [ref=e12]: ▶
+        - text: Videos
+  - main [ref=e13]:
+    - generic [ref=e107]:
+      - heading "Add Book" [level=1] [ref=e108]
+      - generic [ref=e109]:
+        - generic [ref=e110]:
+          - generic [ref=e111]: Title *
+          - textbox [ref=e112]
+        - generic [ref=e113]:
+          - generic [ref=e114]: Author *
+          - textbox [ref=e115]
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e118]: Status
+            - combobox [ref=e119]:
+              - option "Want to Read" [selected]
+              - option "Reading"
+              - option "Finished"
+          - generic [ref=e120]:
+            - generic [ref=e121]: Rating (1-5)
+            - combobox [ref=e122]:
+              - option "No rating" [selected]
+              - option "1"
+              - option "2"
+              - option "3"
+              - option "4"
+              - option "5"
+        - generic [ref=e123]:
+          - generic [ref=e124]: Category *
+          - textbox "e.g. Fiction, Technical, Self-help" [ref=e126]
+        - generic [ref=e127]:
+          - checkbox "Private" [ref=e128]
+          - generic [ref=e129]: Private
+        - generic [ref=e130]:
+          - generic [ref=e131]: Photo
+          - button "Choose File" [ref=e132]
+        - generic [ref=e133]:
+          - generic [ref=e134]: Notes
+          - textbox [ref=e135]
+        - button "Add Book" [ref=e136]
+  - button "Open Next.js Dev Tools" [ref=e28] [cursor=pointer]:
+    - img [ref=e29]
+  - alert [ref=e32]

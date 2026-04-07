@@ -82,6 +82,17 @@ id, title, type, status, rating, recommendedBy, category, isPrivate, yearComplet
 - type: "movie" | "tv-show" | "documentary"
 - status: "queued" | "watching" | "watched" | "dropped"
 
+## Deployment
+
+Two Vercel projects from this repo:
+
+| Project | URL | What |
+|---|---|---|
+| `galgo-keeper` | https://galgo-keeper.vercel.app | Assignment landing page (`index.html`) |
+| `content-manager` | https://content-manager-dusky.vercel.app | Next.js app (from `content-manager/`) |
+
+Deploy the Next.js app: `cd content-manager && vercel --prod`
+
 ## Key Components
 
 - `AppContext.tsx` — all data models, state, CRUD functions, status cycles, status history logic
